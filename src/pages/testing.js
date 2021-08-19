@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default () => {
-    return (
-        <div>
-          Testing page  
-        </div>
-    )
+const testing = () => {
+  return (
+    <div>
+      TEsting page
+    </div>
+  )
 }
+
+export default testing
