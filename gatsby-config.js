@@ -30,6 +30,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
+    `gatsby-plugin-react-helmet`,
 
     {
       resolve: `gatsby-plugin-styled-components`,
@@ -51,6 +52,24 @@ module.exports = {
         spaceId: `do5nzk6691pu`,
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.CONTENFUL_API_KEY,
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Montserrat",
+              variants: ["400"],
+            },
+            {
+              family: "Inconsolata",
+              variants: ["400","500","600","700"],
+            },
+          ],
+        },
       },
     },
 

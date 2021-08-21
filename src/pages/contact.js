@@ -4,11 +4,12 @@ import Layout from '../components/Layout'
 import {graphql } from 'gatsby'
 
 import RecipesList from '../components/RecipesList'
+import SEO from "../components/SEO"
 
 const contact = ({data:{allContentfulRecipe:{nodes:recipes}}}) => {
     return (
         <Layout>
-            
+            <SEO title="Contact" description="Contact page"/>
             <main className="page">
                 <section className="contact-page">
                     <article className="contact-info">
@@ -22,7 +23,7 @@ const contact = ({data:{allContentfulRecipe:{nodes:recipes}}}) => {
 
                     <article>
 
-                        <form className="form contact-form ">
+                        <form className="form contact-form " action="https://formspree.io/f/mdoypyzd" method="POST">
 
                             <div className="form-row">
                                 <label htmlFor="name">Your name</label>
